@@ -101,3 +101,6 @@ export LS_COLORS="di=1;36:fi=0;33"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Created by `pipx` on 2025-02-20 15:36:43
+export PATH="$PATH:/home/erkanperkan/.local/bin"
