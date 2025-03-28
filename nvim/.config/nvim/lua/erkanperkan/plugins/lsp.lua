@@ -28,7 +28,6 @@ return{
             ensure_installed = {
                 "lua_ls",
                 "rust_analyzer",
-                "gopls",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -95,6 +94,7 @@ return{
             window = {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
+                diagnostics = cmp.config.window.bordered(),
             },
             mapping = cmp.mapping.preset.insert({
                 ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
