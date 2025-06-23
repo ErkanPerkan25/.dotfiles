@@ -104,3 +104,4 @@ export LS_COLORS="di=1;36:fi=0;33"
 
 # Created by `pipx` on 2025-02-20 15:36:43
 export PATH="$PATH:/home/erkanperkan/.local/bin"
+eval "$(starship init zsh)"
