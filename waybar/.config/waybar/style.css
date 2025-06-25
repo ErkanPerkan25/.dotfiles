@@ -1,0 +1,17 @@
+/* Style for status bar (Waybar)*/
+* {
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar{
+    /*background: transparent;*/
+}
+
+
+window#waybar.hidden{
+}
+
+#workspaces button{
+    padding: 1px 5px;
+}

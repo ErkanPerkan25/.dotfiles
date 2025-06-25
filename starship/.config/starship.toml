@@ -1,0 +1,26 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+[](#9A348R)
+$username\
+@\
+$hostname\
+:$directory\
+$git_branch\
+$git_state\
+$cmd_duration\
+$time\
+$line_break\
+$character"""
+
+add_newline = false
+
+[character]
+success_symbol = "[>](green)"
+error_symbol = "[>](red)"
+
+[username]
+show_always = true
+style_user = "blue bold"
+style_root = "red bold"
+format = "[$user]($style)"

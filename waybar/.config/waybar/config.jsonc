@@ -1,0 +1,60 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["network","custom/separator","disk","custom/separator","battery","custom/separator","clock"],
+    "spacing": 5,
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 30
+    },
+    "disk": {
+        "interval": 30,
+        "format": "{specific_used:0.1f} GB/{specific_total:0.1f} GB Used",
+        "unit": "GB"
+        // 0.25 GB out of 2000.00 GB available. Alternatively 241.3MiB out of 1.9TiB available.
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
+        },
+        "sort-by-number": true
+    },
+    "network": {
+        "interface": "wlp2s0",
+        "format": "{ifname}",
+        "format-wifi": "{essid} ({signalStrength}%)  " ,
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+        "format-disconnected": "", //An empty format will hide the module.
+        "tooltip-format": "{ifname} via {gwaddr} 󰈀 ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
+        "tooltip-format-ethernet": "{ifname}  ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50
+    },
+    "battery": {
+        "interval": 60,
+        "format": "{capacity}%  {icon}",
+        "full-at": 96,
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format-icons": [" ", " ", " ", " ", " "],
+        "max-length": 30,
+        "design-capacity": true
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "custom/separator": {
+        "format": "|"
+    }
+
+}
