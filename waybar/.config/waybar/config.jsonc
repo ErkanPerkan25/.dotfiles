@@ -1,43 +1,57 @@
 {
     "layer": "top",
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["network","custom/separator","disk","custom/separator","battery","custom/separator","clock"],
-    "spacing": 5,
+    "modules-center": ["clock"],
+    "modules-right": ["memory", "custom/separator", "pulseaudio", "custom/separator","network","custom/separator","disk","custom/separator","battery"],
+    "spacing": 4,
     "hyprland/window": {
         "format": "{title}",
         "max-length": 30
     },
+    "pulseaudio": {
+            "format": "{volume}% {icon}",
+            "format-bluetooth": "{volume}% {icon}",
+            "format-muted": "",
+            "format-icons": {
+                "alsa_output.pci-0000_00_1f.3.analog-stereo": " ",
+                "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "  ",
+                "headphone": " ",
+                "default": [" ", " "]
+            },
+            "scroll-step": 1,
+            "on-click": "pavucontrol",
+            "ignored-sinks": ["Easy Effects Sink"]
+    },
     "disk": {
         "interval": 30,
-        "format": "{specific_used:0.1f} GB/{specific_total:0.1f} GB Used",
+        "format": "{specific_used:0.1f} GB/{specific_total:0.1f} GB",
         "unit": "GB"
         // 0.25 GB out of 2000.00 GB available. Alternatively 241.3MiB out of 1.9TiB available.
     },
     "hyprland/workspaces": {
-        "format": "{icon}",
-        "on-click": "activate",
+        "format": "{id} {icon}",
         "format-icons": {
-            "1": "1",
-            "2": "2",
-            "3": "3",
-            "4": "4",
-            "5": "5"
+            "active": " ",
+            "default": " "
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,2,3
+            ]    
         },
         "sort-by-number": true
     },
-    "network": {
-        "interface": "wlp2s0",
+   "network": {
         "format": "{ifname}",
-        "format-wifi": "{essid} ({signalStrength}%)  " ,
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀 ",
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰊗 ",
         "format-disconnected": "", //An empty format will hide the module.
-        "tooltip-format": "{ifname} via {gwaddr} 󰈀 ",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗 ",
         "tooltip-format-wifi": "{essid} ({signalStrength}%)  ",
         "tooltip-format-ethernet": "{ifname}  ",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50
-    },
+    },    
     "battery": {
         "interval": 60,
         "format": "{capacity}%  {icon}",
@@ -51,7 +65,13 @@
         "design-capacity": true
     },
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "format": "{:%a, %d. %b  %H:%M}  ",
+        "timezone": "America/Indiana/Indianapolis",
+        "max-length": 40
+    },
+    "memory" : {
+        "interval": 30,
+        "format": "{used:0.1f}G/{total:0.1f}G "
     },
     "custom/separator": {
         "format": "|"
