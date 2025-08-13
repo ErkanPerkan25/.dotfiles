@@ -1,9 +1,14 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces", "hyprland/submap"],
+    "modules-left": ["custom/archicon","hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["memory", "custom/separator", "pulseaudio", "custom/separator","network","custom/separator","disk","custom/separator","battery"],
     "spacing": 4,
+    "custom/archicon": {
+       "format": " ",
+       "on-click": "wofi --show drun",
+       "tooltip": false
+     },
     "hyprland/window": {
         "format": "{title}",
         "max-length": 30
@@ -24,7 +29,7 @@
     },
     "disk": {
         "interval": 30,
-        "format": "{specific_used:0.1f} GB/{specific_total:0.1f} GB",
+        "format": "{specific_used:0.1f}/{specific_total:0.1f} GB ",
         "unit": "GB"
         // 0.25 GB out of 2000.00 GB available. Alternatively 241.3MiB out of 1.9TiB available.
     },
@@ -54,15 +59,15 @@
     },    
     "battery": {
         "interval": 60,
-        "format": "{capacity}%  {icon}",
-        "full-at": 96,
+        "format": "{capacity}% {icon}",
+        "full-at": 90,
         "states": {
             "warning": 30,
             "critical": 15
         },
         "format-icons": [" ", " ", " ", " ", " "],
         "max-length": 30,
-        "design-capacity": true
+        "design-capacity": false
     },
     "clock": {
         "format": "{:%a, %d. %b  %H:%M}  ",
