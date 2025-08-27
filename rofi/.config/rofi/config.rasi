@@ -3,13 +3,13 @@ configuration{
 }
 
 * {
-    red:                         rgba ( 220, 50, 47, 100 % );
+    red:                         rgba ( 220, 50, 47, 100% );
     selected-active-foreground:  var(background);
-    lightfg:                     rgba ( 91, 91, 91, 100 % );
+    lightfg:                     rgba ( 91, 91, 91, 70% );
     separatorcolor:              var(foreground);
     urgent-foreground:           var(red);
     alternate-urgent-background: var(lightbg);
-    lightbg:                     rgba ( 170, 170, 170, 100 % );
+    lightbg:                     rgba ( 170, 170, 170, 0% );
     background-color:            transparent;
     border-color:                var(foreground);
     normal-background:           var(background);
@@ -19,14 +19,14 @@ configuration{
     blue:                        rgba ( 38, 139, 210, 100 % );
     alternate-normal-foreground: var(foreground);
     urgent-background:           var(background);
-    selected-normal-foreground:  rgba (255, 255, 255, 100 %);
+    selected-normal-foreground:  rgba (255, 255, 255, 100%);
     active-foreground:           var(blue);
-    background:                  rgba ( 45, 45, 45, 60 % );
+    background:                  rgba ( 45, 45, 45, 60% );
     selected-active-background:  var(blue);
     active-background:           var(background);
     selected-normal-background:  var(lightfg);
     alternate-normal-background: var(lightbg);
-    foreground:                  rgba ( 255,255,255, 100 % );
+    foreground:                  rgba ( 255,255,255, 100% );
     selected-urgent-foreground:  var(background);
     normal-foreground:           var(foreground);
     alternate-urgent-foreground: var(red);

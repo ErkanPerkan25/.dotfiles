@@ -16,7 +16,7 @@ $character"""
 add_newline = false
 
 [character]
-success_symbol = "[>](green)"
+success_symbol = "[>](yellow)"
 error_symbol = "[>](red)"
 
 [username]
@@ -24,3 +24,9 @@ show_always = true
 style_user = "blue bold"
 style_root = "red bold"
 format = "[$user]($style)"
+
+[directory]
+style = "fg:#eb6f92"
+
+[git_branch]
+style = "fg:#f6c177"
