@@ -3,12 +3,13 @@
 # all available config options and their default values.
 # Config syntax crash course
 # ==========================
-#font-family = JetBrains Mono
-font-size = 13
-theme = rose-pine
+font-family = UbuntuMono Nerd Font Mono
+font-size = 15
+theme = Gruvbox Dark
 shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = true
-background-opacity = 0.8
+background-opacity = 0.55
 background = #000000
 background-blur = true
+macos-option-as-alt = false

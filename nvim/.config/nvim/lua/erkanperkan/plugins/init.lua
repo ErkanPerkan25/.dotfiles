@@ -4,5 +4,13 @@ return{
         name = "plenary"
     },
 
-    "eandrju/cellular-automaton.nvim",
+    {
+        "nvim-tree/nvim-web-devicons",
+        opts = {},
+    },
+
+    {
+
+        "eandrju/cellular-automaton.nvim",
+    },
 }
