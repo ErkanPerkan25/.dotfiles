@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wallpaperDirectory="$HOME/Pictures/walls"
+wallpaperDirectory="$HOME/Pictures/wallpapers"
 SCRIPTS_DIR="$HOME/.config/hypr/scripts"
 
 # Variable
@@ -74,17 +74,17 @@ main(){
     pic_index=-1
     for i in "${!PICS[@]}"; do
         filename=$(basename "${PICS[i]}")
-        if [[ "$filename" == "$selectedWall" ]]; then
+        if [[ "$filename" == "$selectedWall"* ]]; then
             pic_index=$i 
             break
         fi
     done
 
-    if [[ $pic_index -ne -i ]]; then
+    if [[ $pic_index -ne -1 ]]; then
         swww img -o "$focused_monitor" "${PICS[$pic_index]}" $SWWW_PARAMS
     else
         echo "Image not found."
-        exit 0
+        exit 1
     fi
 
 }
