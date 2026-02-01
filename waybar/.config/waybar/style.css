@@ -1,7 +1,7 @@
 /* Style for status bar (Waybar)*/
 * {
     font-size: 14px;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: "UbuntuMono Nerd Font Regular", monospace;
     color: #e0def4;
     min-height: 0;
     border-radius: 0;
@@ -18,23 +18,23 @@ window#waybar.hidden{
 }
 
 #workspaces{
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 }
 
 .modules-left{
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 }
 
 .modules-center{
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 }
 
 .modules-right{
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 }
 
 #workspaces button{
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
 
 }
 

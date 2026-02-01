@@ -2,8 +2,8 @@
     "layer": "top",
     "modules-left": ["custom/archicon","hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
-    "modules-right": ["bluetooth" , "cpu", "memory","pulseaudio", "network","disk","battery"],
-    "spacing": 15,
+    "modules-right": ["wlr/taskbar","cpu", "memory","pulseaudio", "network","disk","battery"],
+    "spacing": 10,
     "custom/archicon": {
        "format": " ",
        "on-click": "rofi -show drun",
@@ -11,7 +11,7 @@
      },
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 30
+        "max-length": 28
     },
     "pulseaudio": {
             "format": "{icon}{volume}% ",
@@ -93,7 +93,9 @@
         "on-click": "activate",
         "on-click-middle": "close",
         "ignore-list": [
-          "rofi"
+            "rofi",
+            "kitty",
+            "ghostty"
         ]
     },
     "bluetooth": {
@@ -104,4 +106,5 @@
         "tooltip-format": "{controller_alias}\t{controller_address}",
         "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
         "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-    }}
+    }
+}

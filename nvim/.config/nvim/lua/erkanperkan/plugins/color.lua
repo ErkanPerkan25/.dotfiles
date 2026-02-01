@@ -18,7 +18,7 @@ return {
                 },
             })
 
-            --ColorMyTheme();
+            -- ColorMyTheme();
         end
     },
 
@@ -27,7 +27,7 @@ return {
         lazy = false,
         opts = {},
         config = function()
-            --ColorMyTheme()
+            -- ColorMyTheme("tokyonight")
         end
     },
 
@@ -35,7 +35,7 @@ return {
         "ellisonleao/gruvbox.nvim",
         name="gruvbox",
         config = function()
-            ColorMyTheme("gruvbox")
+             ColorMyTheme("gruvbox")
         end
 
     }

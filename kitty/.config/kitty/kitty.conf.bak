@@ -1,8 +1,8 @@
 # Font Configurations
-font_size       15
-font_family     family="UbuntuMono Nerd Font"
-bold_font        auto
-italic_font      auto
+font_size       13.5
+font_family     family="NotoMono Nerd Font Mono"
+bold_font       auto
+italic_font     auto
 bold_italic_font auto
 
 # Cursor Configurations
