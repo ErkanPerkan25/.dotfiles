@@ -3,7 +3,7 @@
     "modules-left": ["custom/archicon","hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock"],
     "modules-right": ["wlr/taskbar","cpu", "memory","pulseaudio", "network","disk","battery"],
-    "spacing": 10,
+    "spacing": 5,
     "custom/archicon": {
        "format": " ",
        "on-click": "rofi -show drun",
@@ -39,7 +39,7 @@
         "max-length": 10
     },
     "hyprland/workspaces": {
-        "format": "{id} {icon}",
+        "format": "{id}: {icon}",
         "format-icons": {
             "active": " ",
             "default": " "
