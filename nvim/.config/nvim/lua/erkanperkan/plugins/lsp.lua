@@ -77,6 +77,15 @@ return{
                     })
                 end,
 
+                ["clangd"] = function ()
+                    require("lspconfig").clangd.setup({
+                        cmd = {"clangd", "--background-index", "--clang-tidy", "--long-verbose"},
+                        init_options = {
+                            fallbackFlags = {"--std=c++17"},
+                        }
+                    })
+                end
+
             }
         })
 

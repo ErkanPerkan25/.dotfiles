@@ -6,7 +6,7 @@
     min-height: 0;
     border-radius: 0;
     border: none;
-    padding: 0.15rem;
+    padding: 0.14rem;
 }
 
 window#waybar{
@@ -44,3 +44,7 @@ window#waybar.hidden{
     color: red;
 }
 
+#custom-spotify{
+    margin-left: 8rem;
+
+}
