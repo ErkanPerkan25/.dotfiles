@@ -23,11 +23,22 @@ return {
     },
 
     {
+        'Mofiqul/dracula.nvim',
+        name="dracula",
+        config = function ()
+            require("dracula").setup({
+            })
+
+            ColorMyTheme("dracula")
+        end
+    },
+
+    {
          "folke/tokyonight.nvim",
         lazy = false,
         opts = {},
         config = function()
-            ColorMyTheme("tokyonight")
+            --ColorMyTheme("tokyonight")
         end
     },
 

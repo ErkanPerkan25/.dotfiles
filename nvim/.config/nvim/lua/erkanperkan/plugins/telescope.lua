@@ -1,15 +1,20 @@
 return{
     "nvim-telescope/telescope.nvim",
 
-    tag = "0.1.8",
+    version = "*",
 
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-lua/popup.nvim",
+        {"nvim-telescope/telescope-fzf-native.nvim", build = "make"}
     },
 
     config = function()
-        require('telescope').setup({})
+        require('telescope').setup({
+            defaults = {
+                file_ignore_patterns = {"node_modules/", "Library/"}
+            }
+        })
 
         local builtin = require('telescope.builtin')
         -- Search by name for files
