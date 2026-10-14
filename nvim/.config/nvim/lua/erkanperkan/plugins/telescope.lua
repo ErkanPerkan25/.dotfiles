@@ -6,7 +6,11 @@ return{
     dependencies = {
         "nvim-lua/plenary.nvim",
         "nvim-lua/popup.nvim",
+<<<<<<< HEAD
         {"nvim-telescope/telescope-fzf-native.nvim", build = "make"}
+=======
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' }
+>>>>>>> f1480e7 (Changes for colors, tresitter, and telescope.)
     },
 
     config = function()

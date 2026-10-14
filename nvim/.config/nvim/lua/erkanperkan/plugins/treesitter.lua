@@ -1,7 +1,7 @@
-return{
+return {
     {
         "nvim-treesitter/nvim-treesitter",
-        dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
+        branch="main",
         lazy = false,
         build = ":TSUpdate",
         config = function ()
@@ -11,18 +11,20 @@ return{
                     "jsdoc", "bash", "query"
                 },
 
-                sync_install = false,
-
-                auto_install = true,
-
-                indent = {
-                    enable = true,
-                },
-
-                highlights = {
-                    enable = true,
-                    additional_vim_regex_highlighting = true,
-                },
+                -- main branch no longer auto-enables highlighting/indent via setup(),
+                -- so we do it ourselves per-filetype.
+                vim.api.nvim_create_autocmd("FileType", {
+                    pattern = {
+                        "vimdoc", "javascript", "typescript", "c", "lua", "rust",
+                        "javascriptreact", "typescriptreact", "bash",
+                    },
+                    callback = function()
+                        -- pcall in case a parser isn't installed yet
+                        vim.treesitter.start()
+                        vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+                        vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+                    end,
+                })
             })
 
         end
@@ -30,7 +32,7 @@ return{
 
     {
         "nvim-treesitter/nvim-treesitter-context",
-        after = "nvim-treesitter",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
         config = function()
             require'treesitter-context'.setup{
                 enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
